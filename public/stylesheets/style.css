@@ -10,17 +10,69 @@ body {
 }
 
 body {
+  display: flex;
+  flex-wrap: wrap;
   font-family: "Lato", Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
 }
 
-#container {
-  margin: 0 auto;
-  max-width: 800px;
+#headers {
+  border-bottom: 2px solid #999;
+  padding: 0 30px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.headline {
+  display: inline-block;
+  font-weight: lighter;
+  margin-right: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.header-btn {
+  display: inline-block;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.header-btn a,
+.headline a {
+  color: #000;
+  text-decoration: none;
 }
 
 .summary {
   margin: 2em 0;
+}
+
+.product-list {
+  margin: 2em 0;
+  max-width: 500px;
+}
+
+.prod-desc {
+  font-size: 14px;
+}
+
+.list-headers {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.name {
+  position: absolute;
+  padding-left: 10px;
+}
+
+.rating {
+  text-align: right;
+  padding-right: 10px;
 }
