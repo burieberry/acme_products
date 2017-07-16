@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/stylesheets/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="headers">
+    <h1 class="headline"><a href="/">ACME Products</a></h1>
+    <div class="header-btn home"><a href="/">Home</a></div>
+    <div class="header-btn prods"><a href="/products">Products</a></div>
+  </header>
+
+  <main class="container">
+    <h3>New Products!</h3>
+    <p>Our top rated product is <a href="/products/id">{{ topProd }}</a>.</p>
+    <ul class="list-group product-list">
+    <div class="list-headers">
+      <p class="name">Product name</p>
+      <p class="rating">Rating</p>
+    </div>
+      {% for prod in products %}
+      <li class="list-group-item">
+        <a href="/id">{{ prod.name }}</a>
+        <span class="badge">{{ prod.rating }}</span><br>
+        <span class="prod-desc">{{ prod.description }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+</body>
+</html>
