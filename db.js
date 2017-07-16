@@ -1,33 +1,33 @@
 var products = [
   {
     id: 1,
-    name: 'Bazz',
-    rating: 4,
-    description: 'Bazz up yo life!'
+    name: 'Goose IPA',
+    rating: 3.8,
+    description: 'English IPA. Illinois. ABV: 5.9%'
   },
   {
     id: 2,
-    name: 'Foo',
-    rating: 2.5,
-    description: 'What da foo?'
+    name: 'Lindemans Framboise',
+    rating: 4.4,
+    description: 'Lambic. Belgium. ABV: 4%'
   },
   {
-    id: 3,
-    name: 'Bar',
-    rating: 5,
-    description: 'I offer drinks!'
+    id: 3.8,
+    name: 'Guinness Draught',
+    rating: 4,
+    description: 'Irish Dry Stout. Ireland. ABV: 4.2%'
   },
   {
     id: 4,
-    name: 'Whiskey',
-    rating: 4.9,
-    description: 'Popular alcoholic beverage.'
+    name: 'Budweiser',
+    rating: 2,
+    description: 'American Lager. Missouri. ABV: 5%'
   },
   {
     id: 5,
-    name: 'Beer',
-    rating: 4.8,
-    description: 'Booze'
+    name: 'Sixpoint Sweet Action',
+    rating: 4.2,
+    description: 'Cream Ale. Brooklyn. ABV: 5%'
   }
 ];
 
