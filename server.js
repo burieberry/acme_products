@@ -1,7 +1,6 @@
 const express = require('express');
 const swig = require('swig');
 const db = require('./db');
-const routes = require('./routes/products');
 swig.setDefaults({ cache: false });
 
 const app = express();
@@ -15,8 +14,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use('/', routes);
-app.use('/products', routes);
+app.get('/', function(req, res) {
+  res.render('index', { topProd: db.getMaxRating().name });
+});
+
+app.use('/products', require('./routes/products'));
 
 app.use(function(req, res, next) {
   res.send('This page does not exist.'); // fallback for 404 pages

@@ -3,10 +3,6 @@ const router = express.Router();
 const db = require('../db');
 
 router.get('/', function(req, res) {
-  res.render('index', { topProd: db.getMaxRating().name });
-});
-
-router.get('/products', function(req, res) {
   res.render('products', {
     products: db.getProducts(),
     topProd: db.getMaxRating().name
