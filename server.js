@@ -16,6 +16,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', routes);
+app.use('/products', routes);
 
 app.use(function(req, res, next) {
   res.send('This page does not exist.'); // fallback for 404 pages
