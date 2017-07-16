@@ -1,9 +1,8 @@
 const express = require('express');
 const swig = require('swig');
-swig.setDefaults({ cache: false });
-const chalk = require('chalk');
 const db = require('./db');
 const routes = require('./routes/products');
+swig.setDefaults({ cache: false });
 
 const app = express();
 app.set('view engine', 'html');
@@ -12,7 +11,7 @@ app.engine('html', swig.renderFile);
 app.use(express.static('public'));
 
 app.use(function(req, res, next) {
-  console.log(chalk.blue(req.method, req.url));
+  console.log(req.method, req.url);
   next();
 });
 
@@ -25,5 +24,5 @@ app.use(function(req, res, next) {
 const port = process.env.PORT || 3000;
 
 app.listen(port, function() {
-  console.log(chalk.magenta(`Listening on port ${port}`));
+  console.log(`Listening on port ${port}`);
 });
