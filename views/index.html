@@ -21,7 +21,7 @@
 
   <main class="container">
         <section class="summary">
-      <p>Welcome to ACME Products! Our top rated product is <a href="/products/id">{{ topProd }}</a>.</p>
+      <p>Welcome to ACME Products! Our top rated product is <a href="/products/{{ topProd.id }}">{{ topProd.name }}</a>.</p>
       <p><a href="/products/"><strong>See all of our products!</strong></a></p>
     </section>
   </main>

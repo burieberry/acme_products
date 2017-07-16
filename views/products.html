@@ -21,7 +21,6 @@
 
   <main class="container">
     <h3>New Products!</h3>
-    <p>Our top rated product is <a href="/products/id">{{ topProd }}</a>.</p>
     <ul class="list-group product-list">
     <div class="list-headers">
       <p class="name">Product name</p>
@@ -29,7 +28,7 @@
     </div>
       {% for prod in products %}
       <li class="list-group-item">
-        <a href="/id">{{ prod.name }}</a>
+        <a href="/products/{{ prod.id }}">{{ prod.name }}</a>
         <span class="badge">{{ prod.rating }}</span><br>
         <span class="prod-desc">{{ prod.description }}</span>
       </li>
