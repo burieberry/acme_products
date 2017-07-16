@@ -21,7 +21,7 @@ app.get('/', function(req, res) {
 app.use('/products', require('./routes/products'));
 
 app.use(function(req, res, next) {
-  res.send('This page does not exist.'); // fallback for 404 pages
+  res.render('error'); // fallback for 404
 });
 
 const port = process.env.PORT || 3000;
