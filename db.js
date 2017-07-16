@@ -3,31 +3,46 @@ var products = [
     id: 1,
     name: 'Goose IPA',
     rating: 3.8,
-    description: 'English IPA. Illinois. ABV: 5.9%'
+    description: 'English IPA. ABV: 5.9%',
+    style: 'English IPA',
+    origin: 'Illinois',
+    abv: '5.9%'
   },
   {
     id: 2,
     name: 'Lindemans Framboise',
     rating: 4.4,
-    description: 'Lambic. Belgium. ABV: 4%'
+    description: 'Lambic. ABV: 4%',
+    style: 'Lambic',
+    origin: 'Belgium',
+    abv: '4%'
   },
   {
     id: 3.8,
     name: 'Guinness Draught',
     rating: 4,
-    description: 'Irish Dry Stout. Ireland. ABV: 4.2%'
+    description: 'Irish Dry Stout. ABV: 4.2%',
+    style: 'Irish Dry Stout',
+    origin: 'Ireland',
+    abv: '4.2%'
   },
   {
     id: 4,
     name: 'Budweiser',
     rating: 2,
-    description: 'American Lager. Missouri. ABV: 5%'
+    description: 'American Lager. ABV: 5%',
+    style: 'American Lager',
+    origin: 'Missouri',
+    abv: '5%'
   },
   {
     id: 5,
     name: 'Sixpoint Sweet Action',
     rating: 4.2,
-    description: 'Cream Ale. Brooklyn. ABV: 5%'
+    description: 'Cream Ale. ABV: 5%',
+    style: 'Cream Ale',
+    origin: 'Brooklyn',
+    abv: '5%'
   }
 ];
 

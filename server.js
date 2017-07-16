@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 
 app.use('/products', require('./routes/products'));
 
-app.use(function(req, res, next) {
+app.use(function(req, res) {
   res.render('error'); // fallback for 404
 });
 

@@ -7,7 +7,12 @@ router.get('/', function(req, res) {
   });
 });
 
-// router.get('/:id', function(req, res) {});
+router.get('/:id', function(req, res) {
+  var id = req.params.id;
+  res.render('product', {
+    product: db.getProduct(id * 1)
+  });
+});
 
 
 // router.post('/products', function(req, res) {});
