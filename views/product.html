@@ -23,9 +23,9 @@
     <h2>{{ product.name }}</h2>
     <ul class="list-group product-list">
       <li class="list-group-item"><b>Rating:</b> {{ product.rating }}</li>
-      <li class="list-group-item"><b>Style:</b> {{ product.style }}</li>
+      <!-- <li class="list-group-item"><b>Style:</b> {{ product.style }}</li>
       <li class="list-group-item"><b>Origin:</b> {{ product.origin }}</li>
-      <li class="list-group-item"><b>ABV:</b> {{ product.abv }}</li>
+      <li class="list-group-item"><b>ABV:</b> {{ product.abv }}</li> -->
     </ul>
 
     <form action="/products/{{ product.id }}?_method=DELETE" method="POST">
