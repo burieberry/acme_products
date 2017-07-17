@@ -20,9 +20,16 @@
   </header>
 
   <section class="container">
-    <h1>Page Not Found.</h1>
-    <p>I don't know what you're looking for, but this is not it.</p>
-    <p><a href="/">Go back to home page.</a></p>
+    <h2 class="error-hed">Page Not Found.</h2>
+
+    {% if error %}
+      <p class="alert alert-danger para">{{ error }}</p>
+    {% else %}
+      <p class="para">I don't know what you're looking for, but this is not it.</p>
+    {% endif %}
+
+    <p class="para"><a href="/">Go back to home page.</a></p>
+
   </section>
 </body>
 </html>

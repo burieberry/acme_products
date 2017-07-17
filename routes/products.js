@@ -2,20 +2,18 @@ const router = require('express').Router();
 const db = require('../db');
 
 router.get('/', function(req, res) {
-  res.render('products', {
-    products: db.getProducts()
-  });
+  res.render('products', {products: db.getProducts()});
 });
 
 router.get('/:id', function(req, res) {
-  var id = req.params.id;
-  res.render('product', {
-    product: db.getProduct(id * 1)
-  });
+  res.render('product', {product: db.getProduct(req.params.id * 1)});
 });
 
+router.post('/', function(req, res) {
+  db.createProduct(req.body);
+  res.redirect('/products');
+});
 
-// router.post('/products', function(req, res) {});
 // router.delete('/products/:id', function(req, res) {});
 
 module.exports = router;

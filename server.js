@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const swig = require('swig');
 const db = require('./db');
 swig.setDefaults({ cache: false });
@@ -8,6 +9,7 @@ app.set('view engine', 'html');
 app.engine('html', swig.renderFile);
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ exdended: false }));
 
 app.use(function(req, res, next) {
   console.log(req.method, req.url);
@@ -20,7 +22,11 @@ app.get('/', function(req, res) {
 
 app.use('/products', require('./routes/products'));
 
-app.use(function(req, res) {
+app.use(function(err, req, res, next) {
+  res.render('error', { error: err });
+});
+
+app.use(function(req, res, next) {
   res.render('error'); // fallback for 404
 });
 

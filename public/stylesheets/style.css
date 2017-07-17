@@ -38,6 +38,11 @@ h2 {
   margin: 0;
 }
 
+.error-hed {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
 .header-btn {
   display: inline-block;
   padding-right: 20px;
@@ -71,6 +76,10 @@ h2 {
 .name {
   position: absolute;
   padding-left: 10px;
+}
+
+.para {
+  margin-bottom: 20px;
 }
 
 .product-list {

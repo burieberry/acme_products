@@ -67,8 +67,11 @@ function getMaxRating() {
 }
 
 function createProduct(prod) {
-  if(!product.name) {
+  if(!prod.name) {
     throw 'Name is required! Gimme a name, dummkopf.'
+  }
+  if(!prod.rating) {
+    prod.rating = 'Not rated';
   }
   prod.id = Math.round(Math.random() * 1000);
   products.push(prod);
