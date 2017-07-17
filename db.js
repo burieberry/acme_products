@@ -79,7 +79,7 @@ function createProduct(prod) {
 
 function deleteProduct(id) {
   products = products.filter(function(prod) {
-    return prod.id === id;
+    return prod.id !== id;
   });
 }
 

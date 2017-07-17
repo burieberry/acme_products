@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const swig = require('swig');
 const db = require('./db');
 swig.setDefaults({ cache: false });
@@ -10,6 +11,7 @@ app.engine('html', swig.renderFile);
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ exdended: false }));
+app.use(methodOverride('_method'));
 
 app.use(function(req, res, next) {
   console.log(req.method, req.url);
