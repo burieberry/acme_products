@@ -62,7 +62,7 @@ function getMaxRating() {
   }, 0);
 
   return products.filter(function(prod) {
-    return prod.rating === max;
+    return prod.rating * 1 === max;
   })[0];
 }
 

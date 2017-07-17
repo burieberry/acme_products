@@ -19,7 +19,9 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index', { topProd: db.getMaxRating() });
+  res.render('index', {
+    topProd: db.getMaxRating()
+  });
 });
 
 app.use('/products', require('./routes/products'));
