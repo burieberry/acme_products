@@ -57,12 +57,10 @@ function getProduct(id) {
 }
 
 function getMaxRating() {
-  var max = products.reduce(function(acc, curr) {
-    return Math.max(acc, curr.rating);
-  }, 0);
-
   return products.filter(function(prod) {
-    return prod.rating * 1 === max;
+    return prod.rating * 1 === products.reduce(function(acc, curr) {
+      return Math.max(acc, curr.rating);
+    }, 0);
   })[0];
 }
 
