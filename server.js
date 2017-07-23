@@ -9,7 +9,7 @@ const app = express();
 app.set('view engine', 'html');
 app.engine('html', swig.renderFile);
 
-app.use(express.static('public'));
+app.use('/', express.static('public'));
 app.use(bodyParser.urlencoded({ exdended: false }));
 app.use(methodOverride('_method'));
 
