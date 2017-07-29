@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const path = require('path');
 const swig = require('swig');
 const db = require('./db');
 swig.setDefaults({ cache: false });
@@ -9,19 +10,19 @@ const app = express();
 app.set('view engine', 'html');
 app.engine('html', swig.renderFile);
 
-app.use('/', express.static('public'));
+app.use('/', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ exdended: false }));
 app.use(methodOverride('_method'));
 
 app.use(function(req, res, next) {
-  console.log(req.method, req.url);
+  res.on('finish', function() {
+    console.log(req.method, req.url, res.statusCode);
+  });
   next();
 });
 
-app.get('/', function(req, res) {
-  res.render('index', {
-    topProd: db.getMaxRating()
-  });
+app.get('/', function(req, res, next) {
+  res.render('index', { topProd: db.getMaxRating() });
 });
 
 app.use('/products', require('./routes/products'));
